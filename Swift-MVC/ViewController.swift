@@ -12,7 +12,7 @@ class ViewController: UIViewController {
 
   override func viewDidLoad() {
     super.viewDidLoad()
-    // Do any additional setup after loading the view, typically from a nib.
+    // Example to get movie list from serviecs
     Services.getMovieList(1, onSuccess: { (arrMovieData) in
       debugPrint(arrMovieData)
     }) { (error) in
