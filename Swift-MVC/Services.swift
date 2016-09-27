@@ -21,8 +21,8 @@ class Services {
   //MARK: GET -
   
   //MARK: Movie List
-  typealias callBackMovieData = ([MovieData]) -> Void
   
+  typealias callBackMovieData = ([MovieData]) -> Void
   static func getMovieList(intpage: Int? = nil, onSuccess: callBackMovieData? = nil, onError: callBackError? = nil){
     
     var urlString = "\(URLS.BASE_URL)\(URLS.API_MOVIE_PROVIDER)"

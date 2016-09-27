@@ -14,7 +14,10 @@ typealias result = (JSON?,NSError?)
 
 class AFApiClient: NSObject {
   
-   func request(method: Alamofire.Method, urlString: String, requestHendler: result -> Void) {
+  // This method hendle your request using Alamofire
+  // you can use other networking framework also
+  
+  func request(method: Alamofire.Method, urlString: String, requestHendler: result -> Void) {
     var requestResult: (jsonData: JSON?, error: NSError?)
     Alamofire.request(.GET, urlString)
       .validate()
@@ -30,8 +33,6 @@ class AFApiClient: NSObject {
           requestHendler(requestResult)
         }
     }
-    
-
     
   }
 
